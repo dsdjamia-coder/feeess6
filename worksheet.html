@@ -68,7 +68,7 @@
 
     /* Navigation Bar and Hamburger Menu */
     .mobile-toggle { 
-        display: flex; 
+        display: none; 
         align-items: center; 
         justify-content: center; 
         color: var(--primary); 
@@ -80,6 +80,9 @@
         z-index: 1001; 
         position: relative;
         transition: all 0.2s ease;
+    }
+    @media (max-width: 1023px) {
+        .mobile-toggle { display: flex; }
     }
     .mobile-toggle:hover {
         background: #f1f5f9;
@@ -458,6 +461,11 @@
         </div>
       </div>
     </header>
+
+    <div id="drawer-overlay" class="fixed inset-0 bg-gray-900 bg-opacity-50 z-40 hidden opacity-0 transition-opacity duration-300"></div>
+    <aside id="side-drawer" class="fixed top-0 left-0 h-full w-64 bg-white shadow-2xl z-50 transform -translate-x-full lg:translate-x-0 flex flex-col border-r border-gray-200">
+        <!-- Sidebar content -->
+    </aside>
 
     <div id="drawer-overlay" class="fixed inset-0 bg-gray-900 bg-opacity-50 z-40 hidden opacity-0 transition-opacity duration-300"></div>
     <aside id="side-drawer" class="fixed top-0 left-0 h-full w-64 bg-white shadow-2xl z-50 transform -translate-x-full lg:translate-x-0 flex flex-col border-r border-gray-200">
